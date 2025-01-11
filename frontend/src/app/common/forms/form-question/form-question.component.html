@@ -1,0 +1,55 @@
+<div [formGroup]="form" class="form-group" [ngClass]="{'required': question.required}">
+    <label [attr.for]="question.key" class="form-label mt-2">{{ question.label }}</label>
+    <div>
+      @switch (question.controlType) {
+        @case ('date') {
+          <div class="input-group">
+            <input class="form-control" type="text" 
+              #datepickerYMD="bsDaterangepicker"
+              bsDaterangepicker
+              placement="bottom"
+              [formControlName]="question.key"
+              [id]="question.key"
+              [bsConfig]="bsConfig"
+              [maxDate]="maxDate">
+            <span class="input-group-append bg-white">
+                    <button class="btn border" type="button">
+                      <i class="icon fa fa-calendar"></i>
+                  </button>
+            </span>
+          </div>
+          
+        } 
+        @case ('textbox') {
+          <input class="form-control" 
+            [formControlName]="question.key" 
+            [id]="question.key" 
+            [type]="question.type"
+            [minlength]="question.minlength">
+        } 
+        @case ('dropdown') {
+          <select class="form-select" 
+            [id]="question.key" 
+            [formControlName]="question.key">
+          @for (opt of question.options; track opt) {
+            <option [value]="opt.key">{{ opt.value }}</option>
+          }
+          </select>
+        }
+      }
+    </div>
+    
+    @if (!isValid && form.controls[question.key].errors?.['required'] && form.controls[question.key].touched) {
+        <small class="errorMessage" >{{ question.label }} is required. </small>
+    }
+
+    @if (!isValid && form.controls[question.key].errors?.['minlength'] &&  form.controls[question.key].touched) {
+      <small class="errorMessage" >{{ question.label }} has to be {{question.minlength}} characters long.</small>
+
+    }
+    
+    @if (!isValid && form.controls[question.key].errors?.['min'] && form.controls[question.key].touched) {
+      <small class="errorMessage" >{{ question.label }} has to be greater than {{question.min}}.</small>
+    }
+
+  </div>

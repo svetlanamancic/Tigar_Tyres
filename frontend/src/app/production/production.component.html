@@ -1,0 +1,33 @@
+<app-inline-form 
+    [questions]="questions$ | async"
+    (applyFilter)="filterData($event)"
+    *ngIf="accountService.roleAs == 'Quality Supervisor' || accountService.roleAs == 'Business Unit Leader' || accountService.roleAs == 'Admin'">
+</app-inline-form>
+
+<app-modal 
+    *ngIf="modal.toggle" 
+    (modalClose)="modalClosed($event)"
+    [modalDto]="modal">
+</app-modal>
+
+<button class="btn btn-primary mt-5" 
+    *ngIf="accountService.roleAs == 'Production Operator' || accountService.roleAs == 'Quality Supervisor'" 
+    (click)="showForm()">
+    <i class="fa fa-plus"></i> 
+         Register production
+</button>
+
+<button *ngIf="accountService.roleAs == 'Business Unit Leader'" 
+    class="btn btn-primary mt-5 mx-2" 
+    (click)="generatePdf()">Download report</button>
+
+<app-table [tableDto]="tableDto" 
+    (editItem)="onEditRequested($event)"
+    (deleteItem)="onDeleteRequested($event)">
+</app-table>
+
+<app-pagination
+    [currentPage]="pagination?.currentPage"
+    [totalPages]="pagination?.totalPages"
+    (pageChanged)="onPageChange($event)">
+</app-pagination>

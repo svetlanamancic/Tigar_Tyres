@@ -1,0 +1,12 @@
+<div style="margin: 0 20px 0 20px;" class="d-flex justify-content-center">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" autocomplete="off">
+      @for (question of questions; track question) {
+        <div class="form-row mb-2">
+          <app-form-question [question]="question" [form]="form"></app-form-question>
+        </div>
+      }
+      <div class="modal-footer form-row mt-3">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Save</button>
+      </div>
+    </form>
+  </div>

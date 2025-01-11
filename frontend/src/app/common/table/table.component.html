@@ -1,0 +1,26 @@
+<div class="table-responsive-sm">
+    <table class="table table-striped table-sm table-hover mt-3">
+        <thead>
+            <tr class="table-light">
+                <th *ngFor="let headerItem of tableDto?.headers">{{headerItem.title}}</th>
+                <th *ngIf="toggleButtons()">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of tableDto?.data">
+                <td *ngFor="let item of mapData(tableDto?.headers, row)">{{ item }}</td>
+                <td *ngIf="toggleButtons()">
+                    <button  
+                        class="btn btn-sm btn-primary mx-1" 
+                        style="width: 60px;" 
+                        (click)="edit(row)">Edit</button>
+                    <button 
+                        class="btn btn-sm btn-primary" 
+                        style="width: 60px;" 
+                        (click)="delete(row)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

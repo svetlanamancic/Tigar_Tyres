@@ -1,0 +1,10 @@
+.main-content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left .5s ease-in-out;
+}
+
+app-nav:hover ~ .main-content {
+    margin-left: 260px;
+    transition: margin-left .5s ease-in-out;
+}

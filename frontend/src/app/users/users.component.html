@@ -1,0 +1,24 @@
+<button class="btn btn-primary" (click)="showForm()">
+    <i class="fa fa-user-plus"></i> 
+         Register new user
+</button>
+
+<!-- <app-test-errors></app-test-errors> -->
+
+<app-modal 
+    *ngIf="modal.toggle" 
+    (modalClose)="modalClosed($event)"
+    [modalDto]="modal">
+</app-modal>
+
+<app-table [tableDto]="tableDto" 
+    (editItem)="onEditRequested($event)">
+</app-table>
+
+<app-pagination 
+    [currentPage]="pagination?.currentPage"
+    [totalPages]="pagination?.totalPages"
+    (pageChanged)="onPageChange($event)">
+</app-pagination>
+
+<app-toastr [toastrDto]="toastrDto"></app-toastr>

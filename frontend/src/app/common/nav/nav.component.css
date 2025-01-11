@@ -1,0 +1,130 @@
+.sidebar {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #111;
+    padding: 20px 0;
+    overflow: hidden;
+    transition: width .5s ease-in-out;
+
+}
+.sidebar:hover {
+    width: 250px;
+    transition: width .5s ease-in-out;
+}
+
+.sidebar .logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.sidebar .logo-content .logo {
+    display: flex;
+    align-items: center;
+}
+.sidebar .logo-content .logo i {
+    font-size: 28px;
+    color: #fff;
+    margin-right: 10px;
+    display: none;
+}
+.sidebar:hover .logo-content .logo i {
+    display: block;
+}
+.sidebar .logo-content .logo .logo-name {
+    font-size: 22px;
+    color: #fff;
+    display: none;
+}
+.sidebar:hover .logo-content .logo .logo-name {
+    display: block;
+}
+.sidebar .logo-content .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: none;
+}
+.sidebar:hover .logo-content .logo img {
+    display: block;
+}
+
+.sidebar .logo-content .menu-btn {
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+.sidebar ul {
+    margin-top: 20px;
+    padding-left: 0;
+}
+.sidebar ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    margin: 10px 0;
+}
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    justify-content: flex-start;
+}
+.sidebar ul li a:hover {
+    background: #575757;
+}
+.sidebar ul li a i {
+    min-width: 40px;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
+.sidebar:hover ul li a i {
+    display: block;
+}
+.sidebar ul li a .link-name {
+    font-size: 16px;
+    display: none;
+}
+.sidebar:hover ul li a .link-name {
+    display: block;
+}
+.sidebar ul li .sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+.sidebar ul li .sub-menu a {
+    padding: 10px 20px;
+    display: none;
+}
+.sidebar:hover ul li .sub-menu a {
+    display: block;
+}
+.sidebar ul li.showMenu .sub-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+    .sidebar:hover {
+        width: 250px;
+    }
+    .sidebar .logo-content .logo .logo-name,
+    .sidebar ul li a .link-name {
+        display: none;
+    }
+    .sidebar:hover .logo-content .logo .logo-name,
+    .sidebar:hover ul li a .link-name{
+        display: block;
+    }
+}
+
+

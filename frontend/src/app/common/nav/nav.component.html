@@ -1,0 +1,30 @@
+<div class="sidebar">
+    <div class="logo-content">
+        <div class="logo">
+            <img src="tigar.png" alt="">
+            <div class="logo-name">TigarTyres</div>
+        </div>
+        <i class="fa fa-bars menu-btn"></i>
+    </div>
+
+    <ul *ngFor="let menu of menus">
+        <li *ngIf="menu.type === 'dropdown' && menu.roles.indexOf(accountService.getRole()) > -1" (mouseover)="toggleDropdown()" (mouseout)="untoggleDropdown()">
+            <a><i class="fa fa-list"></i><span class="link-name">{{menu.title}}</span><i class="fa fa-chevron-down"></i></a>
+            <ul *ngIf="isDropdownOpen" style="margin-left: 40px;">
+                <li *ngFor="let submenu of menu.submenus"><a routerLink="{{submenu.routerLink}}">{{submenu.title}}</a></li>
+            </ul>
+        </li>
+
+        <li *ngIf="menu.type != 'dropdown' && menu.routerLink != 'logout' && menu.roles.indexOf(accountService.getRole()) > -1">
+            <a routerLink="{{menu.routerLink}}"><i class="{{menu.icon}}"></i><span class="link-name">{{menu.title}}</span></a>
+        </li>
+
+        <li *ngIf="menu.type != 'dropdown' && menu.routerLink === 'logout'">
+            <a (click)="logout()"><i class="{{menu.icon}}"></i><span class="link-name">{{menu.title}}</span></a>
+        </li>
+
+    </ul>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+    <ul class="pagination" *ngIf="totalPages>1">
+        <li class="page-item">
+            <button class="page-link" (click)="goToFirstPage()">&laquo;</button>
+        </li>
+        <li *ngFor="let _ of [].constructor(totalPages); let page = index" [ngClass]="{'active':isSelected(page+1)}">
+            <button class="page-link" (click)="changePage(page+1)">{{(page+1)}}</button>
+        </li>
+        <li class="page-item">
+            <button class="page-link" (click)="goToLastPage()">&raquo;</button>
+        </li>
+    </ul>
+</div>

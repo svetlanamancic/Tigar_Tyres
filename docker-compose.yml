@@ -1,0 +1,44 @@
+networks: 
+  net_bridge:
+    driver: bridge
+
+services:
+  web_api:
+    image: web-api:API
+    build: 
+      context: ./API
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
+    depends_on:
+      - postgres_db
+    networks:
+      - net_bridge
+
+  postgres_db:
+    image: postgres:latest
+    ports: 
+      - "5432:5432"
+    volumes:
+      - postgres_db_volume:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: database
+    networks:
+      - net_bridge
+
+  frontend:
+    image: web-app:API
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - web_api
+    networks:
+      - net_bridge
+volumes:
+  postgres_db_volume:

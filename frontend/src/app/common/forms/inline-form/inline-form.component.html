@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+    <form [formGroup]="form" class="form-inline row flex-fill" (ngSubmit)="submitFilter()" autocomplete="off">
+       
+        @for (question of questions; track question) {
+            @if(question.key != 'date') {
+                <app-form-question class="col-md-1" [question]="question" [form]="form"></app-form-question>
+            }
+            @else { 
+                <app-form-question class="col-md-2" [question]="question" [form]="form"></app-form-question>
+            }
+        }
+        
+        <button class="btn btn-primary mx-2 col-1 align-self-end">
+            <i class="fa fa-filter"></i> 
+                Apply filter
+        </button>
+        <button class="btn btn-primary mx-2 col-1 align-self-end" (click)="resetFilter()">
+            <!-- <i class="fa fa-filter-circle-xmark"></i>  -->
+            Clear filter
+        </button>
+    </form>
+</div>

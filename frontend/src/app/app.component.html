@@ -1,0 +1,14 @@
+<!-- <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+</div> -->
+
+<!-- implement loading indicator as separate service
+https://blog.angular-university.io/angular-loading-indicator/ -->
+
+<div class="page"> 
+    <app-nav *ngIf="(accountService.currentUser$ | async) != null"></app-nav>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

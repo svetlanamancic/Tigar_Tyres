@@ -1,0 +1,23 @@
+<button class="btn btn-primary" (click)="showForm()"
+    *ngIf="accountService.roleAs == 'Quality Supervisor'"  >
+    <i class="fa fa-plus"></i>      
+    Register sales
+</button>
+
+<app-modal 
+    *ngIf="modal.toggle" 
+    (modalClose)="modalClosed($event)"
+    [modalDto]="modal">
+</app-modal>
+
+<app-table 
+    [tableDto]="tableDto" 
+    (editItem)="onEditRequested($event)"
+    (deleteItem)="onDeleteRequested($event)">
+</app-table>
+
+<app-pagination
+    [currentPage]="pagination?.currentPage"
+    [totalPages]="pagination?.totalPages"
+    (pageChanged)="onPageChange($event)">
+</app-pagination>
