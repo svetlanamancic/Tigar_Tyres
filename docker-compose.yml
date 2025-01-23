@@ -40,5 +40,6 @@ services:
       - web_api
     networks:
       - net_bridge
+      
 volumes:
   postgres_db_volume:
