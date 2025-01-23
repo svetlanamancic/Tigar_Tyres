@@ -479,7 +479,5 @@ $RECYCLE.BIN/
 appsettings.json
 database.db
 appsettings.Development.json
-environment.ts
-environment.development.ts
 server.crt
 server.key
