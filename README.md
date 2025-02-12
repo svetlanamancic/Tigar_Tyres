@@ -15,7 +15,7 @@ Docker-compose is used to build and orchestrate all the services. Each of them c
 
 `web-api` service contains C# backend API with DB and Entity Framework.
 
-`web-app` service contains Angular Web App.
+`web-app` service contains Angular 18 Web App.
 
 `postgres` service contains PostgresDB.
 
