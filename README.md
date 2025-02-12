@@ -1,4 +1,5 @@
-# Tigar Tyres Internship Project
+# Tigar Tyres Internship Project <img width="7%" src="https://github.com/user-attachments/assets/1b8ea62d-6c2e-4c21-99f7-ffb0deaf429d"/>
+
 
 Below can be found a short description of the project done as a part of an internship at Tigar Tyres company, part of Michelin group. Some parts we're not included in the [task](./Task.pdf), but were done to improve my technical skills.
 
