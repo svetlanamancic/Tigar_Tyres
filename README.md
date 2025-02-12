@@ -21,7 +21,27 @@
 
 ## Services
 
+Docker-compose is used to build and orchestrate all the services. Each of them could be started separately and locally as well.
 
+`web-api` service contains C# backend API with DB and Entity Framework.
+
+`web-app` service contains Angular Web App.
+
+`postgres` service contains PostgresDB.
+
+## Build
+
+To build containers navigate to the root folder containing docker-compose.yml file and execute:
+
+```bash
+> docker-compose up --build --detach
+```
+
+Inside Docker web_api runs on http://localhost:8001
+
+Inside Docker web_app runs on http://localhost:4200
+
+Tested on: macOS Sequoia 15.3.1
 
 
 
