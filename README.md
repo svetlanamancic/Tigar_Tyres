@@ -42,9 +42,6 @@ Tested on: macOS Sequoia 15.3.1
 > docker compose up --build --detach
 ```
 
-### Project Task
-
-[Here](./Task.pdf) can be found internship task.
 
 
 
