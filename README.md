@@ -43,7 +43,11 @@ Tested on: macOS Sequoia 15.3.1
 > docker compose up --build --detach
 ```
 
+## Screens
 
+<img width="1800" alt="image" src="https://github.com/user-attachments/assets/e9b52650-72e0-490c-9953-a6f917401b62" />
+
+<img width="1800" alt="image" src="https://github.com/user-attachments/assets/8d0b2170-2b4e-4a27-a6fc-5a2c23dceace" />
 
 
 
