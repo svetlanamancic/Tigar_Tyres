@@ -1,5 +1,7 @@
 # Tigar Tyres Internship Project
 
+Below can be found short description of project done as part of an internship at Tigar Tyres company, part of Michelin group.
+
 ## Technology Stack
 
 | **Backend** | **Frontend** | **Components** | **Database** | **Container Management** |
