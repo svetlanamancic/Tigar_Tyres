@@ -1,6 +1,6 @@
 # Tigar Tyres Internship Project
 
-Below can be found short description of project done as part of an internship at Tigar Tyres company, part of Michelin group.
+Below can be found a short description of the project done as a part of an internship at Tigar Tyres company, part of Michelin group.
 
 ## Technology Stack
 
