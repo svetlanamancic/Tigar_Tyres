@@ -5,7 +5,7 @@ Below can be found a short description of the project done as a part of an inter
 
 ## Technology Stack
 
-| **Backend** | **Frontend** | **Components** | **Database** | **Container Management** |
+| **Backend** | **Frontend** | **Components** | **Database** | **Application** |
 | --- | --- | --- | --- | --- |
 | [ ![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff)](#) | [![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?logo=angular&logoColor=white)](#) | [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff)](#) | [![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white)](#) | [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)](#) |
 
