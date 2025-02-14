@@ -55,10 +55,6 @@ Tested on: macOS Sequoia 15.3.1
 
 <img width="1800" alt="image" src="https://github.com/user-attachments/assets/65f03442-b89d-468a-89b0-d3da2ad8c89f" />
 
-<img width="1800" alt="image" src="https://github.com/user-attachments/assets/92b5313c-2b64-4e58-8986-dff7fe4ec193" />
-
-<img width="1800" alt="image" src="https://github.com/user-attachments/assets/d5dc6ef8-6572-4b89-b0fc-8fc5be5bb1fe" />
-
 <img width="1800" alt="image" src="https://github.com/user-attachments/assets/b5d38a8c-c6f9-46dc-bcc2-ac64215d1096" />
 
 
