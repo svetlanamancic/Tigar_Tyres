@@ -5,7 +5,8 @@ Below can be found a short description of the project done as a part of an inter
 
 ### To Do:
 - [ ] Seed database function
-- [ ] Role base authorization fix
+- [ ] Review authorization policy
+- [ ] Introduce IronPdf for report generating
 
 ## Technology Stack
 
