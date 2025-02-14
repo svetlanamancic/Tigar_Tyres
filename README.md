@@ -3,6 +3,10 @@
 
 Below can be found a short description of the project done as a part of an internship at Tigar Tyres company, part of Michelin group. Some parts we're not included in the [task](./Task.pdf), but were done to improve my technical skills.
 
+### To Do:
+- [ ] Seed database function
+- [ ] Role base authorization fix
+
 ## Technology Stack
 
 | **Backend** | **Frontend** | **Components** | **Database** | **Application** |
