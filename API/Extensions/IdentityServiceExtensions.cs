@@ -42,6 +42,7 @@ namespace API.Extensions
 
             //review policies later
             services.AddAuthorization(opt => {
+                
                 opt.AddPolicy("HasRole", policy => policy.RequireAssertion(context => 
                     context.User.IsInRole("Admin") || context.User.IsInRole("Production Operator") 
                     || context.User.IsInRole("Quality Supervisor") || context.User.IsInRole("Business Unit Leader")));

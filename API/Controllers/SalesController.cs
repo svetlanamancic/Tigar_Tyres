@@ -88,7 +88,7 @@ namespace API.Controllers
             sale.PurchasingCompany = salesDTO.PurchasingCompany;
             sale.DestinationMarket = salesDTO.DestinationMarket;
             sale.ModifiedFlag = true;
-            sale.DateModified = DateTime.Now;
+            sale.DateModified = DateTime.UtcNow;
             sale.Modifier = user;
 
             //update production properties if production changed
